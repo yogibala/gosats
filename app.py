@@ -45,7 +45,7 @@ with col1:
         metrics = calculate_metrics(USER_DATA)
         prompt_text = build_prompt(USER_DATA, metrics, final_score, tx_amount)
         
-        model = genai.GenerativeModel("gemini-1.5-flash") # Optimized for speed
+        model = genai.GenerativeModel("gemini-3.1-flash-lite-preview")
         with col2:
             st.subheader("ANIL Proactive Insights")
             with st.spinner("AI is analyzing..."):
