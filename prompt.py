@@ -1,17 +1,18 @@
-def build_prompt(data, metrics):
-    return f"""
-User Name: {data['name']}
-Weekly Spend: ₹{data['weekly_spend']}
-Bitcoin Earned: ₹{data['btc_earned']}
-Reward %: {metrics['btc_percent']}%
-Partner Spend Ratio: {data['partner_ratio']}
+# prompt.py
 
-Instructions:
-- Explain value clearly
-- Suggest improvement
-- Keep under 100 words
-- Output:
-  Summary:
-  Insight:
-  Actions:
+def build_prompt(data, metrics, risk_score):
+    return f"""
+System: You are the GoSats ANIL (AI-Native Intelligence Layer).
+User Data: {data['name']}, Spend: ₹{data['weekly_spend']}, Wealth: ₹{metrics['total_wealth_val']}
+Risk Context: The current transaction risk score is {risk_score}/100.
+
+Task: 
+1. If risk_score > 40, explain that a security check is required.
+2. Provide a 'MARS' wealth tip (Suggesting BTC/Gold/Silver swaps).
+3. Suggest a 'DMN' (Merchant Nudge) based on Swiggy/Amazon habits.
+
+Format:
+Security Status:
+Wealth Insight:
+Next Best Action:
 """
