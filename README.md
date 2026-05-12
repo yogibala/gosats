@@ -1,72 +1,36 @@
-# Executive Summary: AI-Native Intelligence Layer (ANIL)
+# GoSats: AI-Native Intelligence Layer (ANIL) v2.0 Prototype
 
-GoSats has successfully established itself as India’s leading rewards platform for Bitcoin and Digital Gold, but the current user experience is reactive. Users currently earn rewards passively and manage assets in an information vacuum.
+This repository contains the functional prototype for the **AI-Native Intelligence Layer (ANIL)** and the **Fraud Intelligence Layer**, designed for GoSats' transition into a high-scale wealth platform.
 
-To evolve from a cashback app into a **Proactive Financial Coach**, we are introducing the **AI-Native Intelligence Layer (ANIL)**.
+## 🚀 Project Overview
+- **Tri-Engine Fraud Analysis:** Real-time risk scoring using Rule, Anomaly, and GenAI engines.
+- **Predictive Wealth Coaching:** Proactive Bitcoin and Gold swapping signals (MARS).
+- **Dynamic Risk Paths:** Simulated "Allow," "Friction," and "Block" workflows based on behavioral telemetry.
 
----
+## 🛠️ Architecture Logic
+The system is built on a modular "Defense in Depth" strategy:
+1. **Event Collection:** Captures "Soft Signal" telemetry including hardware entropy and geo-spatial data.
+2. **Contextual Enrichment:** Calculates real-time features like Geo-velocity and Reward Velocity.
+3. **Risk Scorer:** A weighted composite engine ($R_s = w_r \cdot S_{rule} + w_a \cdot S_{anomaly} + w_g \cdot S_{genAI}$).
+4. **Action Layer:** Automatically routes high-value wealth transactions through Additional Factor Authentication (AFA).
 
-# Strategic Vision
+## 📁 File Structure
+- `app.py`: The main Streamlit dashboard and UI orchestration.
+- `fraud_engine.py`: Core logic for the Rule, Anomaly, and GenAI scoring engines.
+- `utils.py`: Wealth metric calculations and Market-Aware Reward Swapping (MARS) signals.
+- `data.py`: Simulated user telemetry and historical event baselines.
+- `prompt.py`: Structured XML-based prompts for the AI Financial Assistant.
 
-The goal of ANIL is to transform GoSats into a decision-support layer where:
+## 🔧 Setup Instructions
+1. Clone this repository and install dependencies: `pip install streamlit google-generativeai geopy`.
+2. Generate a Google Gemini API key from [Google AI Studio](https://aistudio.google.com/).
+3. Set your environment variable: `export GOOGLE_API_KEY='your_key'`.
+4. Run the application: `streamlit run app.py`.
 
-> “Your money thinks for you.”
-
-By leveraging real-time ML and behavioral data, we will move from surfacing rewards *after* they happen to surfacing opportunities *before* a user acts.
-
----
-
-# The Three Core Capabilities
-
-| Feature | Primary Objective | Key AI Mechanism |
-|---|---|---|
-| **Predictive Rewards Engine (PRE)** | Eliminate “tracking delay anxiety” by providing reward estimates within 2–5 seconds of a transaction. | Real-time ML inference on transaction events |
-| **Market-Aware Reward Swapping (MARS)** | Solve asset allocation paralysis by suggesting timely swaps between BTC and Gold. | Volatility signals + user risk profiling |
-| **Dynamic Merchant Nudges (DMN)** | Increase spend frequency by surfacing high-relevance merchant suggestions at optimal times. | Sequential pattern mining of spend history |
-
----
-
-# Target Impact & Roadmap
-
-## Success Metrics
-
-We are targeting:
-
-- **22% growth in MAU**
-- **35% increase in Reward Redemption Frequency**
-
-within six months of full rollout.
+## 📊 Success Metrics
+- **System Latency:** Designed for <100ms P99 latency in the "Fast Path."
+- **Asset Integrity:** Targeted Fraud Loss Rate (FLR) of <0.01% for wealth assets.
+- **User Growth:** Optimized for zero-friction rewards tracking to drive MAU growth.
 
 ---
-
-## Timeline
-
-### Phase 1 — Q2 2026
-- Infrastructure and data pipeline foundation
-
-### Phase 2 — Q3 2026
-- Closed Beta for PRE and DMN
-
-### Phase 3 — Q4 2026
-- General Availability, including launch of MARS
-
----
-
-# Regulatory & Risk Management
-
-Given the high stakes of financial AI in India, ANIL is built with **Explainability** and **Compliance** as first-class requirements.
-
-## Regulatory Alignment
-MARS includes mandatory non-dismissible disclaimers to align with SEBI investment advisory boundaries.
-
-## Data Privacy
-Designed for full compliance with the DPDP Act 2023, including granular user consent for each AI feature.
-
-## Trust & Transparency
-Every AI-driven recommendation will be accompanied by a plain-language explanation to ensure user transparency.
-
----
-
-# Bottom Line
-
-ANIL positions GoSats as the uniquely intelligent wealth layer for the next **200 million Indians** entering the digital economy — moving beyond simple rewards into proactive, AI-driven wealth management.
+*Note: This is a simulation prototype for technical demonstration purposes.*
