@@ -1,6 +1,6 @@
-# GoSats: AI-Native Intelligence Layer (ANIL) v2.0 Prototype
+# AI-Native Intelligence Layer (ANIL) v2.0 Prototype for Fintech
 
-This repository contains the functional prototype for the **AI-Native Intelligence Layer (ANIL)** and the **Fraud Intelligence Layer**, designed for GoSats' transition into a high-scale wealth platform.
+This repository contains the functional prototype for the **AI-Native Intelligence Layer (ANIL)** and the **Fraud Intelligence Layer**, designed for Fintech' transition into a high-scale wealth platform.
 
 ## 🚀 Project Overview
 - **Tri-Engine Fraud Analysis:** Real-time risk scoring using Rule, Anomaly, and GenAI engines.
